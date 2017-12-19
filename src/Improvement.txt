@@ -1,0 +1,4 @@
+I assume it would be better we can turn in different degrees instead of 90 only.
+And I should implement a function to create Instruction according to the destination that rover would like to go.And run that instruction after it created.
+The structure could be better.But I went away for something during the implementation so I run out of time of thinking it.
+Thanks
