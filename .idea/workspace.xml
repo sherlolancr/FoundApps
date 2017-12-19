@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9ffc82bd-a545-4043-8758-8afea24d26c0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/Rover.java" afterPath="$PROJECT_DIR$/src/Rover.java" />
-      <change beforePath="$PROJECT_DIR$/src/RoverTest.java" afterPath="$PROJECT_DIR$/src/RoverTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +17,8 @@
       <file leaf-file-name="Rover.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Rover.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
-              <caret line="125" column="21" lean-forward="false" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
+            <state relative-caret-position="-46">
+              <caret line="88" column="26" lean-forward="true" selection-start-line="86" selection-start-column="21" selection-end-line="88" selection-end-column="26" />
               <folding>
                 <element signature="e#230#241#0" expanded="true" />
                 <element signature="e#755#756#0" expanded="true" />
@@ -29,7 +28,7 @@
                 <element signature="e#865#866#0" expanded="true" />
                 <element signature="e#919#920#0" expanded="true" />
                 <element signature="e#2003#2004#0" expanded="true" />
-                <element signature="e#2043#2044#0" expanded="true" />
+                <element signature="e#2148#2149#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -287,9 +286,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RoverTest - 2017.12.19 at 12h 16m 19s.xml">
-      <configuration name="RoverTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RoverTest - 2017.12.19 at 12h 18m 38s.xml">
       <configuration name="RoverTest" configurationId="JUnit" />
     </history-entry>
@@ -315,6 +311,9 @@
       <configuration name="RoverTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="RoverTest - 2017.12.19 at 12h 38m 09s.xml">
+      <configuration name="RoverTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoverTest - 2017.12.19 at 12h 38m 45s.xml">
       <configuration name="RoverTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -378,8 +377,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Rover.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="125" column="21" lean-forward="false" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
+        <state relative-caret-position="-46">
+          <caret line="88" column="26" lean-forward="true" selection-start-line="86" selection-start-column="21" selection-end-line="88" selection-end-column="26" />
           <folding>
             <element signature="e#230#241#0" expanded="true" />
             <element signature="e#755#756#0" expanded="true" />
@@ -389,7 +388,7 @@
             <element signature="e#865#866#0" expanded="true" />
             <element signature="e#919#920#0" expanded="true" />
             <element signature="e#2003#2004#0" expanded="true" />
-            <element signature="e#2043#2044#0" expanded="true" />
+            <element signature="e#2148#2149#0" expanded="true" />
           </folding>
         </state>
       </provider>

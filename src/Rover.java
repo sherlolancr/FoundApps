@@ -72,7 +72,7 @@ public class Rover {
     }
 
 
-    public void updateOccupyMap(int[] obstacle){
+    public void updateOccupyMap(int[] obstacle){ // generally The robot should call a get sonar measurement during moving to update OccupyMap by it self.
         occupyMaps.add(obstacle);
     }
     private void move(int i) {
@@ -80,6 +80,7 @@ public class Rover {
             direction_index = 4+direction_index;
         }
         char currentD = directions.get(direction_index); // if it allows rover to turn any degree , then we can actually implement it with sin cos
+        //the switch is pretty bad structured,but only turn 90 degrees really make it hard to use cos or sin,otherwise it will be better structured
 
         switch (currentD){
 
@@ -103,18 +104,7 @@ public class Rover {
                 }
                 x = x - i;break;
         }
-        if (y >= mapY){
-            y = mapY - 1;
-        }
-        if (y < 0){
-            y = 0;
-        }
-        if (x >= mapX){
-            x = mapX - 1;
-        }
-        if (x < 0 ){
-            x = 0;
-        }
+
     }
 
     private boolean hasObstacle(int x1, int y1) {
