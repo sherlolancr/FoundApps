@@ -6,7 +6,8 @@ public class Rover {
     private int direction_index; // index in direction
     int mapX;
     int mapY;
-    ArrayList<Character> directions = new ArrayList<Character>();
+    private ArrayList<Character> directions = new ArrayList<Character>();
+    private ArrayList<int[]> occupyMaps = new ArrayList<>();
 
     public Rover(int x,int y,char direction,int mapX,int mapY){
         this.x = x;
@@ -65,9 +66,15 @@ public class Rover {
 
     }
 
+    private void turnRight(){
+        direction_index = (direction_index + 1)%4;
+
+    }
 
 
-
+    public void updateOccupyMap(int[] obstacle){
+        occupyMaps.add(obstacle);
+    }
     private void move(int i) {
         if(direction_index <0){
             direction_index = 4+direction_index;
@@ -76,32 +83,48 @@ public class Rover {
 
         switch (currentD){
 
-            case 'N': y = y + i;break;
-            case 'E': x = x + i;break;
-            case 'S': y = y - i;break;
-            case 'W': x = x - i;break;
+            case 'N':
+                if (((y == mapY -1 || hasObstacle(x,y+1))&& i == 1) || ((y == 0|| hasObstacle(x,y-1)) && i == -1)){
+                    break;
+                }
+                y = y + i;break;
+            case 'E':
+                if (((x == mapX -1 || hasObstacle(x+1,y))&& i == 1) || ((x == 0|| hasObstacle(x-1,y)) && i == -1)){
+                    break;
+                }x = x + i;break;
+            case 'S':
+                if (((y == mapY -1 || hasObstacle(x,y+1))&& i == -1) || ((y == 0|| hasObstacle(x,y-1)) && i == 1)){
+                    break;
+                }
+                y = y - i;break;
+            case 'W':
+                if (((x == mapX -1 || hasObstacle(x+1,y))&& i == -1) || ((x == 0|| hasObstacle(x-1,y)) && i == 1)){
+                    break;
+                }
+                x = x - i;break;
         }
-        if (y >= 100){
-            y = 99;
+        if (y >= mapY){
+            y = mapY - 1;
         }
         if (y < 0){
             y = 0;
         }
-        if (x >= 100){
-            x = 99;
+        if (x >= mapX){
+            x = mapX - 1;
         }
         if (x < 0 ){
             x = 0;
         }
     }
 
-
-
-    private void turnRight(){
-        direction_index = (direction_index + 1)%4;
-
+    private boolean hasObstacle(int x1, int y1) {
+        for (int[] o : occupyMaps){
+            if(o[0] == x1 && o[1] == y1){
+                return true;
+            }
+        }
+        return false;
     }
-
 
 
 

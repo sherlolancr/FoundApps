@@ -23,4 +23,24 @@ public class RoverTest {
         assertEquals(0, rover.getY());
 
     }
+
+    @Test
+    public void testBound(){
+        Rover rover = new Rover(0,0,'N',10,10);
+        rover.followInstruction("BBBBBBBBBBBLFFFFFFFFFFFLL");
+        assertEquals(0, rover.getX());
+        assertEquals(0, rover.getY());
+        rover.followInstruction("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFLFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
+        assertEquals(9, rover.getX());
+        assertEquals(9, rover.getY());
+    }
+
+    @Test
+    public void testOccupy(){
+        Rover rover = new Rover(0,0,'N',10,10);
+        rover.updateOccupyMap(new int[] {0,1});
+        rover.followInstruction("F");
+        assertEquals(0, rover.getX());
+        assertEquals(0, rover.getY());
+    }
 }
